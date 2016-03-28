@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script>
+		var date = new Date();
+		var hour = date.getHours();
+		
+		switch (true) {
+		case hour < 11:
+			alert("Breakfast...");
+			break;
+		case hour < 15:
+			alert("Lunch...");
+			break;
+		default:
+			alert("Dinner...");
+			break;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
