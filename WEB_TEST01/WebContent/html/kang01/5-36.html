@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script>
+		var URI = "http://hanb.co.kr?test=한글입니다.";
+		
+		var output = '';
+		output += 'escape()\n';
+		output += escape(URI) + '\n\n';
+		output += 'escapeURI()\n';
+		output += escapeURI(URI) + '\n\n';
+		output += 'escapeURIComponent()\n';
+		output += escapeURIComponent(URI) + '\n\n';
+		
+		alert(output);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
