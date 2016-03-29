@@ -9,5 +9,25 @@
 </head>
 <body>
 
+<pre>
+	@echo off
+	
+	cls
+	
+	set count=1
+	
+	for /l %%i in (1,1,5) do (
+		echo 현재 반복횟수 : %count%
+		call :add
+	)
+	
+	pause > null
+	exit /b 0
+	
+	:add
+	set /a count += 1
+	goto :eof
+</pre>
+
 </body>
 </html>
