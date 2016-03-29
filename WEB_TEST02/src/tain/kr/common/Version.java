@@ -19,6 +19,8 @@
  */
 package tain.kr.common;
 
+import java.util.ResourceBundle;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -42,7 +44,55 @@ public class Version {
 	private static final Logger log = Logger.getLogger(Version.class);
 
 	///////////////////////////////////////////////////////////////////////////////////////////////
+	
+	private String clsName = null;
+	
+	private String desc = null;
+	
+	private Version() throws Exception {
+		
+		if (flag) {
+			this.clsName = this.getClass().getName();
+			
+			ResourceBundle rb = ResourceBundle.getBundle(this.clsName.replace('.', '/'));
+			
+			this.desc = rb.getString("tain.kr.common.version.desc");
+		}
+	}
+	
+	public String getDesc() throws Exception {
+		
+		return this.desc;
+	}
+	
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	
+	private static Version instance = null;
+	
+	public static synchronized Version getInstance() throws Exception {
+		
+		if (instance == null) {
+			instance = new Version();
+		}
+		
+		return instance;
+	}
+	
+	///////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
+	private static void test01(String[] args) throws Exception {
+		
+		if (flag) {
+			log.debug(">>>>> " + Version.getInstance().getDesc());
+		}
+	}
+	
+	public static void main(String[] args) throws Exception {
+		
+		if (flag) log.info(">>>>> " + new Object(){}.getClass().getEnclosingClass().getName());
+		
+		if (flag) test01(args);
+	}
 }
