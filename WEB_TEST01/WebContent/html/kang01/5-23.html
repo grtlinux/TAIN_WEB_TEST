@@ -4,6 +4,22 @@
 	<meta charset="EUC-KR">
 	<title>Insert title here</title>
 	<script>
+		// 선언함수가 먼저 실행되기 때문에 아래의 처리는 자~알 해야 함.
+		var callback = function() {
+			alert('함수 호출');
+		};
+	
+		function callTenTimes() {
+			for (var i=0; i < 2; i++) {
+				callback();
+			}
+		};
+		
+		callTenTimes();
+		
+		/*
+		// 실행 순서가 선언함수 -> 익명함수 순이지만 선언함수에 인자로 함수를 전달함.
+		// 정상처리됨.
 		function callTenTimes(callback) {
 			for (var i=0; i < 10; i++) {
 				callback();
@@ -15,7 +31,8 @@
 		};
 		
 		callTenTimes(callback);
-		
+		*/
+	
 	</script>
 </head>
 <body>
