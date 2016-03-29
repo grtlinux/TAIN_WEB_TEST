@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script>
+		function callTenTimes(callback) {
+			for (var i=0; i<2; i++) {
+				callback();
+			}
+		};
+		
+		callTenTimes(function() {
+			alert('함수 호출');
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
