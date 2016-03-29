@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script>
+		var primitiveNumber = 237;
+		var objectNumber = new Number(237);
+		
+		Number.prototype.method = function() {
+			return 'Method on Prototype';
+		};
+		
+		var output = '';
+		output += primitiveNumber.method() + '\n';
+		output += objectNumber.method();
+		
+		alert(output);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
