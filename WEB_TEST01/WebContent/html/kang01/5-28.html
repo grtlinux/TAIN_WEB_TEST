@@ -4,7 +4,19 @@
 	<meta charset="EUC-KR">
 	<title>Insert title here</title>
 	<script>
-	
+		function test(name) {
+			var output = 'Hello ' + name + '..!';
+			
+			return function() {
+				alert(output);
+			};
+		};
+		
+		var t1 = test('JavaScript');
+		var t2 = test('Compiler');
+		
+		t1();
+		t2();
 	</script>
 </head>
 <body>
