@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script>
+		var student = {};
+		
+		student.이름 = '윤인성';
+		student.취미 = '악기';
+		student.특기 = '프로그램';
+		student.장래희망 = '생명공학자';
+		
+		student.toString = function() {
+			var output = '';
+			for (var key in this) {
+				if (key != 'toString') {
+					output += key + '    ' + this[key] + '\n';
+				}
+			}
+			return output;
+		};
+		
+		alert(student.toString());
+		
+		delete(student.장래희망);
+		
+		alert(student);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
