@@ -89,10 +89,26 @@ public class Version {
 		}
 	}
 	
+	private static void test02(String[] args) throws Exception {
+		
+		if (flag) {
+			try {
+				System.out.println("Running...");         // 1
+				throw new Exception("Hello, error.");    // 2
+			} catch (Exception e) {
+				System.out.println("Exception...");       // 3
+				throw e;                                 // 5
+			} finally {
+				System.out.println("Finally");            // 4
+			}
+		}
+	}
+	
 	public static void main(String[] args) throws Exception {
 		
 		if (flag) log.info(">>>>> " + new Object(){}.getClass().getEnclosingClass().getName());
 		
-		if (flag) test01(args);
+		if (!flag) test01(args);
+		if (flag) test02(args);
 	}
 }
