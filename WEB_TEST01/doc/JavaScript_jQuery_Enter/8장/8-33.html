@@ -8,12 +8,26 @@
         // 변수를 선언합니다.
         var array = [52, 273, 103, 32, 274, 129];
 
-        // 반복문과 조건문으로 100보다 큰 요소를 제거합니다.
-        for (var i = array.length; i >= 0; i--) {
-            if (array[i] > 100) {
-                array.remove(i);
-            }
-        }
+		if (!true) {
+			// @@@ print undefined at index i=array.length
+			// 반복문과 조건문으로 100보다 큰 요소를 제거합니다.
+			for (var i = array.length; i >= 0; i--) {
+				alert(array[i]);
+				if (array[i] > 100) {
+					array.remove(i);
+				}
+			}
+		}
+
+		if (true) {
+			// 반복문과 조건문으로 100보다 큰 요소를 제거합니다.
+			for (var i = array.length-1; i >= 0; i--) {
+				if (!true) alert(array[i]);
+				if (array[i] > 100) {
+					array.remove(i);
+				}
+			}
+		}
 
         // 출력합니다.
         alert(array);
