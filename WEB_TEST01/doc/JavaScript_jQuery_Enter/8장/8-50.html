@@ -2,15 +2,29 @@
 <html>
 <head>
     <script>
-        // 변수를 선언합니다.
-        var array = [1, 2, 3, 4, 5];
+        if (true) {
+			// 변수를 선언합니다.
+			var array = [1, 2, 3, 4, 5];
 
-        // 출력합니다.
-        var output = '';
-        array.reduce(function (previousValue, currentValue, index, array) {
-            output += previousValue + ' : ' + currentValue + ' : ' + index + '\n';
-        });
-        alert(output);
+			// 출력합니다.
+			var output = '';
+			array.reduce(function (previousValue, currentValue, index, array) {
+				output += previousValue + ' : ' + currentValue + ' : ' + index + '\n';
+			});
+			alert(output);
+        }
+
+        if (true) {
+			// 변수를 선언합니다.
+			var array = [1, 2, 3, 4, 5];
+
+			// 출력합니다.
+			var output = '';
+			array.reduceRight(function (previousValue, currentValue, index, array) {
+				output += previousValue + ' : ' + currentValue + ' : ' + index + '\n';
+			});
+			alert(output);
+        }
     </script>
 </head>
 <body>
