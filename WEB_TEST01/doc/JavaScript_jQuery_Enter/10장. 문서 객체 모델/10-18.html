@@ -3,14 +3,16 @@
 <head>
     <title>Index</title>
     <script>
-        window.onload = function () {
-            // 문서 객체를 가져옵니다.
-            var headers = document.getElementsByTagName('h1');
-            for (var i = 0; i < headers.length; i++) {
-                // 문서 객체의 속성을 변경합니다.
-                headers[i].innerHTML = 'with getElementsByTagName()';
-            }
-        };
+        if (true) {
+			window.onload = function () {
+				// 문서 객체를 가져옵니다.
+				var headers = document.getElementsByTagName('h1');
+				for (var i = 0; i < headers.length; i++) {
+					// 문서 객체의 속성을 변경합니다.
+					headers[i].innerHTML = 'with getElementsByTagName()' + i;
+				}
+			};
+        }
     </script>
 </head>
 <body>
