@@ -3,17 +3,25 @@
 <head>
     <title>Index</title>
     <script>
-        window.onload = function () {
-            // 문서 객체를 가져옵니다.
-            var headers = document.getElementsByTagName('h1');
+        if (true) {
+			window.onload = function () {
+				// 문서 객체를 가져옵니다.
+				var headers = document.getElementsByTagName('h1');
 
-            // 출력합니다.
-            var output = '';
-            for (var i in headers) {
-                output += i + '\n';
-            }
-            alert(output);
-        };
+				// 출력합니다.
+				//   0
+				//   1
+				//   length
+				//   item
+				//   namedItem
+				//
+				var output = '';
+				for (var i in headers) {
+					output += i + '\n';
+				}
+				alert(output);
+			};
+        }
     </script>
 </head>
 <body>
