@@ -1,4 +1,5 @@
 ----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -19,11 +20,128 @@ body {
 }
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배경을 표시할 범위를 지정하고 싶다</title>
+<link rel="stylesheet" href="bg02.css">
+</head>
+<body>
+<div id="sample1"><code>border-box</code></div>
+<div id="sample2"><code>padding-box</code></div>
+<div id="sample3"><code>content-box</code></div>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------
+div {
+	margin: 20px;
+	padding: 20px;
+	border: 15px solid rgba(000,128,128,0.5) /*rgba(139,000,000,0.5)*/;
+	width: 350px;
+	height: 50px;
+	background-image: url(dia2.gif);
+}
+code {
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+#sample1 {
+	background-clip: border-box;
+}
+#sample2 {
+	background-clip: padding-box;
+}
+#sample3 {
+	background-clip: content-box;
+}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배경 이미지의 기준 위치를 지정하고 싶다</title>
+<link rel="stylesheet" href="bg03.css">
+</head>
+<body>
+<div id="sample1"><code>padding-box</code></div>
+<div id="sample2"><code>border-box</code></div>
+<div id="sample3"><code>content-box</code></div>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------
+div {
+	margin: 20px;
+	padding: 20px;
+	border: 15px solid rgba(255,069,000,0.5);
+	width: 350px;
+	height: 50px;
+	background: url(dia1.gif) no-repeat;
+}
+code {
+	color: #ffffff;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+#sample1 {
+	background-origin: padding-box;
+}
+#sample2 {
+	background-origin: border-box;
+}
+#sample3 {
+	background-origin: content-box;
+}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배경 이미지의 크기를 지정하고 싶다</title>
+<link rel="stylesheet" href="bg04.css">
+</head>
+<body>
+<div id="sample1"><code>contain</code></div>
+<div id="sample2"><code>cover</code></div>
+
+<div id="sample3"><code>auto 90px</code></div>
+<div id="sample4"><code>100% 100%</code></div>
+</body>
+</html>
+
 ----------------------------------------------------------------------------------------------------
+div {
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid rgb(210,105,030);
+	width: 350px;
+	height: 100px;
+	background-image: url(carrot.gif);
+	background-repeat: no-repeat;
+}
+code{
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+#sample1 {
+	background-size: contain;
+}
+#sample2 {
+	background-size: cover;
+}
+#sample3 {
+	background-size: auto 90px;
+}
+#sample4 {
+	background-size: 100% 100%;
+}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
