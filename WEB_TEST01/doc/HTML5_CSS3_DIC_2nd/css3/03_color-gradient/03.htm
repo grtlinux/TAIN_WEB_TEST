@@ -1,15 +1,199 @@
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>투명도를 지정하고 싶다</title>
+<link rel="stylesheet" href="cl01.css">
+</head>
+<body>
+<div id="sample00"><code>opacity: 0.0</code></div>
+<div id="sample01"><code>opacity: 0.1</code></div>
+<div id="sample02"><code>opacity: 0.2</code></div>
+<div id="sample03"><code>opacity: 0.3</code></div>
+<div id="sample04"><code>opacity: 0.4</code></div>
+<div id="sample05"><code>opacity: 0.5</code></div>
+<div id="sample06"><code>opacity: 0.6</code></div>
+<div id="sample07"><code>opacity: 0.7</code></div>
+<div id="sample08"><code>opacity: 0.8</code></div>
+<div id="sample09"><code>opacity: 0.9</code></div>
+<div id="sample10"><code>opacity: 1.0</code></div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+body{
+	margin: 20px;
+	background: url(sky.jpg);
+}
+code {
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+}
+div {
+	padding: 15px;
+	border: 10px solid #ffffff;
+	background-color: #00cc99;
+}
+#sample00 {
+	opacity: 0.0;
+}
+#sample01 {
+	opacity: 0.1;
+}
+#sample02 {
+	opacity: 0.2;
+}
+#sample03 {
+	opacity: 0.3;
+}
+#sample04 {
+	opacity: 0.4;
+}
+#sample05 {
+	opacity: 0.5;
+}
+#sample06 {
+	opacity: 0.6;
+}
+#sample07 {
+	opacity: 0.7;
+}
+#sample08 {
+	opacity: 0.8;
+}
+#sample09 {
+	opacity: 0.9;
+}
+#sample10 {
+	opacity: 1.0;
+}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>선형 그러데이션을 지정하고 싶다</title>
+<link rel="stylesheet" href="cl02.css">
+</head>
+<body>
+<div id="sample1">sample1</div>
+<div id="sample2">sample2</div>
+<div id="sample3">sample3</div>
+<div id="sample4">sample4</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+div {
+	margin: 10px;
+	width: 250px;
+	height: 120px;
+	color: #ffffff;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+}
+#sample1 {
+	background: -webkit-linear-gradient(teal, navy);
+	background: linear-gradient(teal, navy);
+}
+#sample2 {
+	background: -webkit-linear-gradient(top left, teal, navy);
+	background: linear-gradient(to bottom right, teal, navy);
+}
+#sample3 {
+	background: -webkit-linear-gradient(135deg, teal, navy);
+	background: linear-gradient(315deg, teal, navy);
+}
+#sample4 {
+	background: -webkit-linear-gradient(left, white, teal 20%, navy 70%, black);
+	background: linear-gradient(to right, white, teal 20%, navy 70%, black);
+}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>원형(방사형) 그러데이션을 지정하고 싶다</title>
+<link rel="stylesheet" href="cl03.css">
+</head>
+<body>
+<div class="container">
+<div id="circle1">circle1</div>
+<div id="circle2">circle2</div>
+</div>
+<div class="container">
+<div id="ellipse1">ellipse1</div>
+<div id="ellipse2">ellipse2</div>
+</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+div {
+	margin-right:10px;
+	width: 300px;
+	color: #ffffff;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+}
+div.container {
+	margin: 30px 10px;
+	width: 100%;
+	height: 140px;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: flex;
+}
+#circle1 {
+	background: -webkit-radial-gradient(60px 50px, 40px 40px, white, black);
+	background: radial-gradient(circle 40px at 60px 50px, white, black);
+}
+#circle2 {
+	background: -webkit-radial-gradient(center, circle closest-side, white, red 55%, black);
+	background: radial-gradient(circle closest-side at center, white, red 55%, black);
+}
+#ellipse1 {
+	background: -webkit-radial-gradient(20% 90%, 150px 80px, white, black);
+	background: radial-gradient(ellipse 150px 80px at 20% 90%, white, black);
+}
+#ellipse2 {
+	background: -webkit-radial-gradient(center, ellipse farthest-side, white, red 55%, black);
+	background: radial-gradient(ellipse farthest-side at center, white, red 55%, black);
+}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>그러데이션을 반복하고 싶다</title>
+<link rel="stylesheet" href="cl04.css">
+</head>
+<body>
+<div id="sample1">sample1</div>
+<div id="sample2">sample2</div>
+</body>
+</html>
 ----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
+div {
+	margin: 10px;
+	width: 250px;
+	height: 120px;
+	color: #ffffff;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+}
+#sample1 {
+	background: -webkit-repeating-linear-gradient(left, teal 0%, navy 15%, black 30%);
+	background: repeating-linear-gradient(to right, teal 0%, navy 15%, black 30%);
+}
+#sample2 {
+	background: -webkit-repeating-radial-gradient(60px 50px, 40px 40px, white, red, black);
+	background: repeating-radial-gradient(circle 40px at 60px 50px, white, red, black);
+}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
