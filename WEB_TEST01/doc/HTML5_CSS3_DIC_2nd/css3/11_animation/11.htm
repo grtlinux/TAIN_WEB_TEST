@@ -1,0 +1,636 @@
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션의 키프레임을 설정하고 싶다</title>
+<link rel="stylesheet" href="an01.css">
+</head>
+<body>
+<div>sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@keyframes mymove {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	40% {
+		left: 200px;
+		top: 0px;
+	}
+	70% {
+		left: 200px;
+		top: 200px;
+	}
+	100% {
+		left: 400px;
+		top: 200px;
+	}
+}
+body { 
+	margin: 0;
+}
+div {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: #da70d6;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	animation-name: mymove;
+	animation-duration: 5s;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>사용할 키프레임을 지정하고 싶다</title>
+<link rel="stylesheet" href="an02.css">
+</head>
+<body>
+<div>sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	40% {
+		left: 200px;
+		top: 0px;
+	}
+	70% {
+		left: 200px;
+		top: 200px;
+	}
+	100% {
+		left: 400px;
+		top: 200px;
+	}
+}
+@keyframes mymove {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	40% {
+		left: 200px;
+		top: 0px;
+	}
+	70% {
+		left: 200px;
+		top: 200px;
+	}
+	100% {
+		left: 400px;
+		top: 200px;
+	}
+}
+body { 
+	margin: 0;
+}
+div {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: #da70d6;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 5s;
+	animation-name: mymove;
+	animation-duration: 5s;
+
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션을 실행할 시간을 지정하고 싶다</title>
+<link rel="stylesheet" href="an03.css">
+</head>
+<body>
+<div><div id="test2">sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+@keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+div {
+	width: 100px;
+	height: 100px;
+	background-color: #ffa500;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+}
+div:hover {
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 3s;
+	animation-name: mymove;
+	animation-duration: 3s;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션의 속도 패턴을 지정하고 싶다</title>
+<link rel="stylesheet" href="an04.css">
+</head>
+<body>
+<div id="sample1">ease</div>
+<div id="sample2">linear</div>
+<div id="sample3">ease-in</div>
+<div id="sample4">ease-out</div>
+<div id="sample5">ease-in-out</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		left: 0px;
+		width: 100px;
+	}
+	100% {
+		left:0px;
+		width: 400px;
+	}
+}
+@keyframes mymove {
+	0% {
+		left: 0px;
+		width: 100px;
+	}
+	100% {
+		left:0px;
+		width: 400px;
+	}
+}
+div {
+	margin: 1px;
+	width: 100px;
+	height: 50px;
+	position: relative;
+	background-color: #3cb371;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 5s;
+	animation-name: mymove;
+	animation-duration: 5s;
+}
+#sample1 {
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
+}
+#sample2 {
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+#sample3 {
+	-webkit-animation-timing-function: ease-in; 
+	animation-timing-function: ease-in;
+}
+#sample4 {
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+}
+#sample5 {
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션을 실행할 횟수를 지정하고 싶다</title>
+<link rel="stylesheet" href="an05.css">
+</head>
+<body>
+<div>sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+@keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+div {
+	width: 100px;
+	height: 100px;
+	background-color: #ffa500;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name: mymove;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션을 반복할 방향을 지정하고 싶다</title>
+<link rel="stylesheet" href="an06.css">
+</head>
+<body>
+<div>sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+@keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+div {
+	width: 100px;
+	height: 100px;
+	background-color: #ffa500;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate-reverse;
+	animation-name: mymove;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션의 실행 및 일시 정지를 지정하고 싶다</title>
+<link rel="stylesheet" href="an07.css">
+</head>
+<body>
+<div>sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+@keyframes mymove {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+	50% {
+		width: 300px;
+		height: 100px;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+	}
+}
+div {
+	width: 100px;
+	height: 100px;
+	background-color: #ffa500;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name: mymove;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+div:hover {
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션의 시작을 늦추고 싶다</title>
+<link rel="stylesheet" href="an08.css">
+</head>
+<body>
+<div>sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		background-color: #ff3366;
+	}
+	40% {
+		background-color: #ffcc33;
+	}
+	70% {
+		background-color: #99ff66;
+	}
+	100% {
+		background-color: #33ccff;
+	}
+}
+@keyframes mymove {
+	0% {
+		background-color: #ff3366;
+	}
+	40% {
+		background-color: #ffcc33;
+	}
+	70% {
+		background-color: #99ff66;
+	}
+	100% {
+		background-color: #33ccff;
+	}
+}
+div {
+	padding: 2em;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ff3366;
+}
+div:hover {
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 2s;
+	animation-name: mymove;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션의 대기중이나 완료후의 스타일을 지정하고 싶다</title>
+<link rel="stylesheet" href="an09.css">
+</head>
+<body>
+<div>sample</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes mymove {
+	0% {
+		background-color: #ff3366;
+	}
+	40% {
+		background-color: #ffcc33;
+	}
+	70% {
+		background-color: #99ff66;
+	}
+	100% {
+		background-color: #33ccff;
+	}
+}
+@keyframes mymove {
+	0% {
+		background-color: #ff3366;
+	}
+	40% {
+		background-color: #ffcc33;
+	}
+	70% {
+		background-color: #99ff66;
+	}
+	100% {
+		background-color: #33ccff;
+	}
+}
+div {
+	padding: 2em;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background-color: #c0c0c0;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+div:hover {
+	-webkit-animation-name: mymove;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 2s;
+	animation-name: mymove;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>애니메이션의 프로퍼티를 일괄 지정하고 싶다</title>
+<link rel="stylesheet" href="an10.css">
+</head>
+<body>
+<div><img src="rabbit_flute.gif"></div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------
+@-webkit-keyframes rabbit {
+	0%	{
+		-webkit-transform: rotate(0deg);
+	}
+	20%	{
+		-webkit-transform: rotate(30deg);
+	}
+	40%	{
+		-webkit-transform: rotate(0deg);
+	}
+	60% {
+		-webkit-transform: rotate(-30deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);	
+	}
+}
+@keyframes rabbit {
+	0%	{
+		transform: rotate(0deg);
+	}
+	20%	{
+		transform: rotate(30deg);
+	}
+	40%	{
+		transform: rotate(0deg);
+	}
+	60% {
+		transform: rotate(-30deg);
+	}
+	100% {
+		transform: rotate(0deg);	
+	}
+}
+div{
+	margin: 20px 100px;
+	width: 182px;
+	height: 255px;
+	-webkit-transform-origin: center bottom;
+	-webkit-animation: rabbit 8s ease-in-out infinite;
+	transform-origin: center bottom;
+	animation: rabbit 8s ease-in-out infinite;
+}
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
