@@ -108,7 +108,7 @@ public class Version {
 		
 		if (flag) log.info(">>>>> " + new Object(){}.getClass().getEnclosingClass().getName());
 		
-		if (!flag) test01(args);
-		if (flag) test02(args);
+		if (flag) test01(args);
+		if (!flag) test02(args);
 	}
 }
