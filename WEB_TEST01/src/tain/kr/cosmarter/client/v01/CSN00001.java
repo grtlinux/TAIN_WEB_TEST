@@ -57,7 +57,7 @@ public class CSN00001 {
 	private static final String KEY_CLIENT_CONNECT_HOST = "tain.cosmarter.client.connect.host";
 	private static final String KEY_CLIENT_CONNECT_PORT = "tain.cosmarter.client.connect.port";
 	private static final String KEY_CLIENT_COMMAND_01 = "tain.cosmarter.client.command.01";
-	private static final String KEY_CLIENT_COMMAND_02 = "tain.cosmarter.client.command.02";
+	//private static final String KEY_CLIENT_COMMAND_02 = "tain.cosmarter.client.command.02";
 	
 	private String strClientDesc = null;
 	private String strConnectHost = null;
@@ -78,7 +78,7 @@ public class CSN00001 {
 			this.strConnectHost = rb.getString(KEY_CLIENT_CONNECT_HOST);
 			this.nConnectPort = Integer.parseInt(rb.getString(KEY_CLIENT_CONNECT_PORT));
 			this.strCommand01 = rb.getString(KEY_CLIENT_COMMAND_01);
-			this.strCommand02 = rb.getString(KEY_CLIENT_COMMAND_02);
+			// this.strCommand02 = rb.getString(KEY_CLIENT_COMMAND_02);
 		}
 		
 		if (flag) {
@@ -159,6 +159,41 @@ public class CSN00001 {
 		}
 	}
 	
+	public String getMessage() throws Exception {
+		
+		StringBuffer sb = new StringBuffer();
+		
+		if (flag) {
+			/*
+			 * Single command
+			 */
+			PrintWriter pw = null;
+			BufferedReader br = null;
+			String line = null;
+			
+			Socket socket = new Socket(this.strConnectHost, this.nConnectPort);
+			
+			pw = new PrintWriter(socket.getOutputStream());
+			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			
+			log.info(">>>>> COMMAND_01   : " + this.strCommand01);
+			pw.println(this.strCommand01);
+			pw.flush();
+			
+			while ((line = br.readLine()) != null) {
+				if (flag) log.debug(">>>>> [" + line + "]");
+				
+				sb.append(line).append(StrUtil.getNewLine());
+			}
+			
+			br.close();
+			pw.close();
+			socket.close();
+		}
+		
+		return sb.toString();
+	}
+	
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	
 	private static CSN00001 instance = null;
@@ -179,7 +214,7 @@ public class CSN00001 {
 	private static void test01(String[] args) throws Exception {
 		
 		if (flag) {
-			
+			System.out.println(CSN00001.getInstance().getMessage());
 		}
 	}
 	
