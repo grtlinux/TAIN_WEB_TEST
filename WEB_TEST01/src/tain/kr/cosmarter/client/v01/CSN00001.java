@@ -81,7 +81,7 @@ public class CSN00001 {
 			// this.strCommand02 = rb.getString(KEY_CLIENT_COMMAND_02);
 		}
 		
-		if (flag) {
+		if (!flag) {
 			log.info(">>>>> DESC         : " + this.strClientDesc);
 			log.info(">>>>> CONNECT HOST : " + this.strConnectHost);
 			log.info(">>>>> CONNECT PORT : " + this.nConnectPort);
@@ -163,7 +163,7 @@ public class CSN00001 {
 		
 		StringBuffer sb = new StringBuffer();
 		
-		if (flag) {
+		if (!flag) {
 			/*
 			 * Single command
 			 */
@@ -176,12 +176,12 @@ public class CSN00001 {
 			pw = new PrintWriter(socket.getOutputStream());
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			
-			log.info(">>>>> COMMAND_01   : " + this.strCommand01);
+			if (!flag) log.info(">>>>> COMMAND_01   : " + this.strCommand01);
 			pw.println(this.strCommand01);
 			pw.flush();
 			
 			while ((line = br.readLine()) != null) {
-				if (flag) log.debug(">>>>> [" + line + "]");
+				if (!flag) log.debug(">>>>> [" + line + "]");
 				
 				sb.append(line).append(StrUtil.getNewLine());
 			}
@@ -189,6 +189,10 @@ public class CSN00001 {
 			br.close();
 			pw.close();
 			socket.close();
+		}
+		
+		if (flag) {
+			sb.append("Hello, Kang...");
 		}
 		
 		return sb.toString();
