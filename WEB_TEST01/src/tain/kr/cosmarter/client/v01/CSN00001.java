@@ -81,10 +81,11 @@ public class CSN00001 {
 			// this.strCommand02 = rb.getString(KEY_CLIENT_COMMAND_02);
 		}
 		
-		if (!flag) {
+		if (flag) {
 			log.info(">>>>> DESC         : " + this.strClientDesc);
 			log.info(">>>>> CONNECT HOST : " + this.strConnectHost);
 			log.info(">>>>> CONNECT PORT : " + this.nConnectPort);
+			log.info(">>>>> COMMAND_01   : " + this.strCommand01);
 		}
 	}
 	
@@ -163,7 +164,7 @@ public class CSN00001 {
 		
 		StringBuffer sb = new StringBuffer();
 		
-		if (!flag) {
+		if (flag) {
 			/*
 			 * Single command
 			 */
@@ -191,7 +192,7 @@ public class CSN00001 {
 			socket.close();
 		}
 		
-		if (flag) {
+		if (!flag) {
 			sb.append("Hello, Kang...");
 		}
 		
