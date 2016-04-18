@@ -344,6 +344,136 @@
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server version:        Apache Tomcat/7.0.68
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server built:          Feb 8 2016 20:25:54 UTC
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server number:         7.0.68.0
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Name:               Windows 7
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Version:            6.1
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Architecture:          amd64
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Java Home:             M:\PROG\jdk1.7.0_79\jre
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Version:           1.7.0_79-b15
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Vendor:            Oracle Corporation
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_BASE:         M:\PROG\apache-tomcat-7.0.68-x64
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_HOME:         M:\PROG\apache-tomcat-7.0.68-x64
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Djava.util.logging.config.file=M:\PROG\apache-tomcat-7.0.68-x64\conf\logging.properties
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Djava.endorsed.dirs=M:\PROG\apache-tomcat-7.0.68-x64\endorsed
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.base=M:\PROG\apache-tomcat-7.0.68-x64
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.home=M:\PROG\apache-tomcat-7.0.68-x64
+4월 18, 2016 5:39:02 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Djava.io.tmpdir=M:\PROG\apache-tomcat-7.0.68-x64\temp
+4월 18, 2016 5:39:02 오후 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+정보: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+4월 18, 2016 5:39:02 오후 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+정보: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+4월 18, 2016 5:39:03 오후 org.apache.catalina.core.AprLifecycleListener initializeSSL
+정보: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+4월 18, 2016 5:39:03 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["http-apr-8080"]
+4월 18, 2016 5:39:03 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["ajp-apr-8009"]
+4월 18, 2016 5:39:03 오후 org.apache.catalina.startup.Catalina load
+정보: Initialization processed in 1237 ms
+4월 18, 2016 5:39:03 오후 org.apache.catalina.core.StandardService startInternal
+정보: Starting service Catalina
+4월 18, 2016 5:39:03 오후 org.apache.catalina.core.StandardEngine startInternal
+정보: Starting Servlet Engine: Apache Tomcat/7.0.68
+
+
+
+
+4월 18, 2016 5:39:03 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deploying configuration descriptor M:\PROG\apache-tomcat-7.0.68-x64\conf\Catalina\localhost\WEB_TEST.xml
+4월 18, 2016 5:39:03 오후 org.apache.catalina.startup.SetContextPropertiesRule begin
+경고: [SetContextPropertiesRule]{Context} Setting property 'debug' to '0' did not find a matching property.
+4월 18, 2016 5:39:03 오후 org.apache.catalina.startup.SetContextPropertiesRule begin
+경고: [SetContextPropertiesRule]{Context} Setting property 'autoDeploy' to 'true' did not find a matching property.
+4월 18, 2016 5:39:03 오후 org.apache.tomcat.util.digester.Digester endElement
+경고:   No rules found matching 'Context/Logger'.
+4월 18, 2016 5:39:03 오후 org.apache.catalina.startup.TldConfig execute
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deployment of configuration descriptor M:\PROG\apache-tomcat-7.0.68-x64\conf\Catalina\localhost\WEB_TEST.xml has finished in 153 ms
+
+
+
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deploying configuration descriptor M:\PROG\apache-tomcat-7.0.68-x64\conf\Catalina\localhost\WEB_TEST01.xml
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.SetContextPropertiesRule begin
+경고: [SetContextPropertiesRule]{Context} Setting property 'debug' to '0' did not find a matching property.
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.SetContextPropertiesRule begin
+경고: [SetContextPropertiesRule]{Context} Setting property 'autoDeploy' to 'true' did not find a matching property.
+4월 18, 2016 5:39:04 오후 org.apache.tomcat.util.digester.Digester endElement
+경고:   No rules found matching 'Context/Logger'.
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.TldConfig execute
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deployment of configuration descriptor M:\PROG\apache-tomcat-7.0.68-x64\conf\Catalina\localhost\WEB_TEST01.xml has finished in 81 ms
+
+
+
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deploying configuration descriptor M:\PROG\apache-tomcat-7.0.68-x64\conf\Catalina\localhost\WEB_TEST02.xml
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.SetContextPropertiesRule begin
+경고: [SetContextPropertiesRule]{Context} Setting property 'debug' to '0' did not find a matching property.
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.SetContextPropertiesRule begin
+경고: [SetContextPropertiesRule]{Context} Setting property 'autoDeploy' to 'true' did not find a matching property.
+4월 18, 2016 5:39:04 오후 org.apache.tomcat.util.digester.Digester endElement
+경고:   No rules found matching 'Context/Logger'.
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.TldConfig execute
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deployment of configuration descriptor M:\PROG\apache-tomcat-7.0.68-x64\conf\Catalina\localhost\WEB_TEST02.xml has finished in 83 ms
+
+
+
+
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory M:\WORK\WEB\webapps\docs
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deployment of web application directory M:\WORK\WEB\webapps\docs has finished in 45 ms
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory M:\WORK\WEB\webapps\examples
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deployment of web application directory M:\WORK\WEB\webapps\examples has finished in 290 ms
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory M:\WORK\WEB\webapps\host-manager
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deployment of web application directory M:\WORK\WEB\webapps\host-manager has finished in 51 ms
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory M:\WORK\WEB\webapps\manager
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deployment of web application directory M:\WORK\WEB\webapps\manager has finished in 56 ms
+
+
+
+
+4월 18, 2016 5:39:04 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["http-apr-8080"]
+4월 18, 2016 5:39:04 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["ajp-apr-8009"]
+4월 18, 2016 5:39:04 오후 org.apache.catalina.startup.Catalina start
+정보: Server startup in 1331 ms
+
+
+
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------

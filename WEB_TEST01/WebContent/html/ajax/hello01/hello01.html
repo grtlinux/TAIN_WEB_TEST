@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>AJAX hello01</title>
+
+	<!-- AJAX -->
+	<script type="text/javascript">
+		var httpRequest = null;
+		
+		function getXMLHttpRequest() {
+			if (window.ActiveXObject) {
+				try {
+					return new ActiveXObject("Msxml2.XMLHTTP")
+				} catch (e) {
+					try {
+						return new ActiveXObject("Microsoft.XMLHTTP");
+					} catch (e1) {
+						return null;
+					}
+				}
+			} else if (window.XMLHttpRequest) {
+				return new XMLHttpRequest();
+			} else {
+				return null;
+			}
+		}
+		
+		function load(url) {
+			httpRequest = getXMLHttpRequest();
+			httpRequest.onreadystatechange = viewMessage;
+			httpRequest.open("GET", url, true);
+			httpRequest.send(null);
+		}
+		
+		function viewMessage() {
+			if (httpRequest.readyState == 4) {
+				if (httpRequest.status == 200) {
+					alert(httpRequest.responseText);
+				} else {
+					alert("실패 : " + httpRequest.status);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+
+<input type="button" value="hello01.txt(utf-8)" onclick="load('hello01.txt')" />
+<input type="button" value="hello01.jsp(utf-8)" onclick="load('hello01.jsp')" />
+<input type="button" value="hello01-2.txt(euc-kr) 깨짐" onclick="load('hello01-2.txt')" />
+<input type="button" value="hello01-2.jsp(euc-kr)" onclick="load('hello01-2.jsp')" />
+
+</body>
+</html>
