@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta http_equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<title>JSON 테스트</title>
+	<script>
+		function doRequestPostAjax1(url) {
+			
+			var xhr;
+			
+			if (window.ActiveXObject) {
+				xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			} else if (window.XMLHttpRequest) {
+				xhr = new XMLHttpRequest();
+			}
+			
+			xhr.open("POST", url, true);
+			xhr.onreadystatechange = function() {
+			
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						var r_txt = xhr.responseText;
+						console.log(r_txt);
+						var toEval = "var Person = " + r_txt.replace(/^\s*/,"").replace(/\s*$/,"");  // remove space charater in front and end
+						eval(toEval);
+						alert(Person.id + ", " + Person.value);
+					}
+				}
+			};
+			
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=euc-kr");
+			xhr.send("");
+		}
+		
+		function doRequestPostAjax2(url) {
+			
+			var xhr;
+			
+			if (window.ActiveXObject) {
+				xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			} else if (window.XMLHttpRequest) {
+				xhr = new XMLHttpRequest();
+			}
+			
+			xhr.open("POST", url, true);
+			xhr.onreadystatechange = function() {
+			
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						var r_txt = xhr.responseText;
+						console.log(r_txt);
+						var toEval = "var PersonList = " + r_txt.replace(/^\s*/,"").replace(/\s*$/,"");  // remove space charater in front and end
+						eval(toEval);
+						for (var i in PersonList) {
+							alert(PersonList[i].id + ", " + PersonList[i].value);
+						}
+					}
+				}
+			};
+			
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=euc-kr");
+			xhr.send("");
+		}
+	</script>
+</head>
+<body>
+	<button type="button" onclick="javascript:doRequestPostAjax1('./json-object.jsp');" >ajax1</button>
+	<button type="button" onclick="javascript:doRequestPostAjax2('./json-array.jsp');" >ajax2</button>
+</body>
+</html>
