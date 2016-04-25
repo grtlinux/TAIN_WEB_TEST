@@ -3,6 +3,24 @@
 <head>
 	<meta charset="euc-kr">
 	<title>JSON 테스트</title>
+	<style>
+	table, th, td {
+		border: 1px solid grey;
+		border-collapse: collapse;
+		padding: 5px;
+		font-size: 13px;
+		font-family: "굴림체";
+		font-style: normal;
+	}
+	
+	table tr:nth-child(odd) {
+		background-color: #f1f1f1;
+	}
+	
+	table tr:nth-child(even) {
+		background-color: #ffffff;
+	}
+	</style>
 	<script>
 		function doRequestPostAjax(url) {
 			
@@ -17,22 +35,48 @@
 			xhr.open("POST", url, true);
 			xhr.onreadystatechange = function() {
 			
-				if (xhr.readyState == 4) {
-					if (xhr.status == 200) {
-						var r_txt = xhr.responseText;
-						console.log(r_txt);
-
-						alert("json OK!!!");
-					}
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var text = xhr.responseText;
+					console.log(text);
+					
+					//text = "{\"lstps\":[{\"cmd\":\"/sbin/init\",},]}";
+					makeTable(text);
+					//alert("json OK!!!");
 				}
 			};
 			
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=euc-kr");
 			xhr.send("");
 		}
+		
+		function makeTable(response) {
+			//var ret = JSON.parse(response);       // fixed format
+			var ret = eval("(" + response + ")");   // permit format
+			
+			var out = "<table>";
+			
+			for (var i=0; i < ret.lstps.length; i++) {
+				out += "<tr>";
+				out += "<td>" + ret.lstps[i].uid   + "</td>";
+				out += "<td>" + ret.lstps[i].pid   + "</td>";
+				out += "<td>" + ret.lstps[i].ppid  + "</td>";
+				out += "<td>" + ret.lstps[i].stime + "</td>";
+				out += "<td>" + ret.lstps[i].tty   + "</td>";
+				out += "<td>" + ret.lstps[i].time  + "</td>";
+				out += "<td>" + ret.lstps[i].cmd   + "</td>";
+				out += "</tr>";
+			}
+			
+			out += "</table>";
+			
+			document.getElementById("tbl01").innerHTML = out;
+		}
 	</script>
 </head>
 <body>
 	<button type="button" onclick="javascript:doRequestPostAjax('./json_ps01.jsp');" >ajax1</button>
+	
+	<div id="tbl01"></div>
+	
 </body>
 </html>
