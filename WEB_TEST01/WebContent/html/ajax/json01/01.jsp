@@ -14,7 +14,7 @@
 	
 	bean.setName("lstps");
 	bean.setCmd("ps -ef");
-	bean.setRetInfo("uid:1, pid:1, ppid:1, cpu:0, stime:1, tty:1, time:1, cmd:1");
+	bean.setRetInfo("uid:1, pid:1, ppid:0, cpu:0, stime:1, tty:0, time:0, cmd:1");
 	bean.setSkip("1");
 	
 	CoBeanClient.getInstance().process(bean);
