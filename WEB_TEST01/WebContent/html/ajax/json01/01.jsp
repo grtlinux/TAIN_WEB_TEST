@@ -13,7 +13,7 @@
 	bean.setPort("7412");
 	
 	bean.setName("lstps");
-	bean.setCmd("ps -ef");
+	bean.setCmd("ps -ef | grep kang | grep -v grep | grep -v root");
 	bean.setRetInfo("uid:1, pid:1, ppid:0, cpu:0, stime:1, tty:0, time:0, cmd:1");
 	bean.setSkip("1");
 	
