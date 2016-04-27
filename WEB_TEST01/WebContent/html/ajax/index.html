@@ -12,7 +12,7 @@
 	<link href="/WEB_TEST01/css/kfonts2.css" rel="stylesheet">
 	<style>
 		body {
-			padding-top: 70px;
+			padding-top: 55px;
 		}
 	</style>
 </head>
@@ -35,10 +35,13 @@
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">메뉴1<b class="caret"></b></a>
+						<a href="javascript:return false;" class="dropdown-toggle" data-toggle="dropdown">메뉴1<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li role="presentation" class="dropdown-header">[ 메뉴 ]</li>
-							<li role="presentation"><a href="#">메뉴 4-1</a></li>
+							<li role="presentation"><a href="javascript:;" onclick="alert('hello1')">메뉴 1-1</a></li>
+							<li role="presentation"><a href="javascript:;" onclick="alert('hello2')">메뉴 1-2</a></li>
+							<li role="presentation"><a href="javascript:;" onclick="alert('hello3')">메뉴 1-3</a></li>
+							<li role="presentation"><a href="javascript:;" onclick="alert('hello4')">메뉴 1-4</a></li>
 							<li role="separator" class="divider"></li>
 							<li role="presentation"><a href="#">메뉴 4-1</a></li>
 						</ul>
@@ -64,18 +67,18 @@
 				</form>
 			</div>
 		</nav>
-		
-		<article>
-			<div id="tbl_ps"></div>
-		</article>
 	</div>
 	
 	
+	<iframe width="100%" height="600px" src="http://localhost:8080/" style="border: none;" name="iframeA"></iframe>
 	
 	
 	
 	
 	<div> <!-- end of container -->
+		<footer style="text-align:center;">
+			&copy; 2014~2016 TAIN, Inc. All rights reserved.
+		</footer>
 		<script src="/WEB_TEST01/js/jquery-2.2.2.min.js"></script>
 		<script src="/WEB_TEST01/js/bootstrap.min.js"></script>
 		<script>
