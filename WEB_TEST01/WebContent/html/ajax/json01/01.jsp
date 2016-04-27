@@ -2,11 +2,13 @@
 <%@ page import = "tain.kr.com.proj.cosmarter.v01.bean.SimpleBean" %>
 <%@ page import = "tain.kr.com.proj.cosmarter.v01.main.client.CoBeanClient" %>
 <%
+	boolean flag = true;
+
 	request.setCharacterEncoding("euc-kr");
 	String name = request.getParameter("name");
 
 	SimpleBean bean = new SimpleBean();
-	if (true) bean.setIpAddr("cosmarter01");
+	if (flag) bean.setIpAddr("cosmarter01");
 	else bean.setIpAddr("cosmarter02");
 	bean.setPort("7412");
 	
