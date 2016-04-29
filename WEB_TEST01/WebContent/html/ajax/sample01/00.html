@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="euc-kr">
-	<title>JSON 01-01</title>
+	<title>샘플01-00</title>
 	<style>
 		table, th, td {
 			border: 1px solid grey;
@@ -21,60 +21,15 @@
 			background-color: #ffffff;
 		}
 	</style>
+	<script src="/WEB_TEST01/js/jquery-2.2.2.min.js"></script>
 	<script>
-		function json01_01(url) {
-			
-			var xhr;
-			
-			if (window.ActiveXObject) {
-				xhr = new ActiveXObject("Microsoft.XMLHTTP");
-			} else if (window.XMLHttpRequest) {
-				xhr = new XMLHttpRequest();
-			}
-			
-			xhr.onreadystatechange = function() {
-			
-				if (xhr.readyState == 4 && xhr.status == 200) {
-					var text = xhr.responseText.replace(/^\s*/,"").replace(/\s*$/,"");  // remove space charater in front and end
-					console.log(text);
-					
-					makeTable(text);
-				}
-			};
-			
-			xhr.open("POST", url, true);
-			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=euc-kr");
-			xhr.send();
-		}
-		
-		function makeTable(response) {
-			//var ret = JSON.parse(response);       // fixed format
-			var ret = eval("(" + response + ")");   // permit format
-			
-			var out = "<table>";
-			
-			for (var i=0; i < ret.lstps.length; i++) {
-				out += "<tr>";
-				out += "<td>" + ret.lstps[i].uid   + "</td>";
-				out += "<td>" + ret.lstps[i].pid   + "</td>";
-				//out += "<td>" + ret.lstps[i].ppid  + "</td>";
-				out += "<td>" + ret.lstps[i].stime + "</td>";
-				//out += "<td>" + ret.lstps[i].tty   + "</td>";
-				//out += "<td>" + ret.lstps[i].time  + "</td>";
-				out += "<td>" + ret.lstps[i].cmd   + "</td>";
-				out += "</tr>";
-			}
-			
-			out += "</table>";
-			
-			document.getElementById("tbl01").innerHTML = out;
-		}
+		$(document).ready(
+			function () {
+				alert("Hello, world!!!!");
+			});
 	</script>
 </head>
 <body>
-	<p>
-		<button type="button" onclick="json01_01('./01.jsp');" >json01_01</button>
-	</p>
 
 	<div id="tbl01">
 	</div>
