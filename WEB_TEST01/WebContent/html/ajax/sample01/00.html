@@ -95,6 +95,32 @@
 					});
 				}
 				
+				if (true) {
+					$("button#onhtml").click(function() {
+						var outText = "";
+						
+						outText += "Text : " + $("p#onhtml").text() + "\n";
+						outText += "HTML : " + $("p#onhtml").html() + "\n";
+						outText += "Value : " + $("input#test").val() + "\n";
+						
+						alert(outText);
+					});
+				}
+				
+				if (true) {
+					$("button#onattr").click(function() {
+						alert($("a#onattr").attr("href"));
+					});
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 				
 				
@@ -116,8 +142,8 @@
 	<p id="onclick">Click me away!!!</p>
 	<p id="onclick">Click me too!</p>
 	
-	<hr>
-	
+<hr>
+
 	<table>
 		<tr>
 			<td>Name</td>
@@ -129,16 +155,16 @@
 		</tr>
 	</table>
 	
-	<hr>
+<hr>
 	
 	<p id="onitem">Click or move the mouse pointer over this paragraph.</p>
 	
-	<hr>
+<hr>
 	
 	<div id="flip">Click to slide down pannel</div>
 	<div id="panel">Hello world!!</div>
 	
-	<hr>
+<hr>
 	
 	<p>By default, all HTML elements have a static position, and cannot be moved.
 	To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
@@ -147,12 +173,42 @@
 	
 	<div id="onmove" style="background:#98bf21; width:200px; height:100px; position:absolute;"></div>
 	
-	<hr>
+<hr>
 	
 	<p id="onchain">jQuery is fun!!!</p>
 	<button id="onchain">Click me for slideup/down</button>
 	
-	<hr>
+<hr>
+	
+	<button id="onhtml">Show Content</button>
+	<p id="onhtml">Name : <input type="text" id="test" value="Mickey Mouse"></p>
+	
+<hr>
+	
+	<button id="onattr">Show Attr</button>
+	<p><a id="onattr" href="http://www.w3schools.com">W3Schools.com</a></p>
+	
+<hr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
